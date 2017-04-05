@@ -205,6 +205,12 @@
                           Detail="Use the skew transform for a text shadow"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.SkewShadowTextPage}" />
+                
+                <!-- Matrix -->
+                <TextCell Text="Touch Manipulation"
+                          Detail="Pan, scale, and rotate a bitmap"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.TouchManipulationPage}" />
 
             </TableSection>
         </TableRoot>
