@@ -211,7 +211,49 @@
                           Detail="Pan, scale, and rotate a bitmap"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.TouchManipulationPage}" />
+            </TableSection>
 
+            <TableSection Title="Curves (Splines &amp; Arcs)">
+                
+                <TextCell Text="Bézier Spline"
+                          Detail="Interactively draw a cubic Bézier spline"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.BezierSplinePage}" />
+
+                <TextCell Text="Quadratic Spline"
+                          Detail="Interactively draw a quadratic Bézier spline"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.QuadraticSplinePage}" />
+
+                <TextCell Text="Angle Arc"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.AngleArcPage}" />
+
+                <TextCell Text="Corner Arc"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.CornerArcPage}" />
+
+                <TextCell Text="SVG Arc"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.SvgArcPage}" />
+
+                <TextCell Text="Arc Infinity"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ArcInfinityPage}" />
+
+                <TextCell Text="Analog Clock"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.AnalogClockPage}" />
+
+                <TextCell Text="Conic Spline"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ConicSplinePage}" />
             </TableSection>
         </TableRoot>
     </TableView>
