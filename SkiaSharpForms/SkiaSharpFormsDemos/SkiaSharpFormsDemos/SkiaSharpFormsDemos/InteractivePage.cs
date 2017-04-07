@@ -7,7 +7,7 @@ using SkiaSharp.Views.Forms;
 
 using TouchTracking;
 
-namespace SkiaSharpFormsDemos.Curves
+namespace SkiaSharpFormsDemos
 {
     public class InteractivePage : ContentPage
     {

@@ -17,6 +17,17 @@ namespace SkiaSharpFormsDemos
         long touchId;
         SKPoint previousPoint;
 
+        public TouchPoint()
+        {
+        }
+
+        public TouchPoint(float x, float y)
+        {
+            Center = new SKPoint(x, y);
+        }
+
+
+
         public SKPoint Center { set; get; }
 
         public float Radius { set; get; } = 75;

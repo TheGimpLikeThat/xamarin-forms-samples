@@ -60,7 +60,7 @@
     <Compile Include="Curves\CornerArcPage.xaml.cs">
       <DependentUpon>CornerArcPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Curves\InteractivePage.cs" />
+    <Compile Include="InteractivePage.cs" />
     <Compile Include="Curves\QuadraticSplinePage.xaml.cs">
       <DependentUpon>QuadraticSplinePage.xaml</DependentUpon>
     </Compile>
@@ -121,15 +121,25 @@
     <Compile Include="Transforms\HendecagramAnimationPage.cs" />
     <Compile Include="Transforms\HendecagramArrayPage.cs" />
     <Compile Include="Transforms\IsotropicScalingPage.cs" />
+    <Compile Include="MatrixDisplay.cs" />
     <Compile Include="Transforms\ObliqueTextPage.cs" />
     <Compile Include="Transforms\RotateAndRevolvePage.cs" />
     <Compile Include="Transforms\RotatedTextPage.cs" />
+    <Compile Include="Transforms\ShowAffineMatrixPage.xaml.cs">
+      <DependentUpon>ShowAffineMatrixPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transforms\ShowNonAffineMatrixPage.xaml.cs">
+      <DependentUpon>ShowNonAffineMatrixPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Transforms\SkewAngleExperimentPage.xaml.cs">
       <DependentUpon>SkewAngleExperimentPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Transforms\SkewShadowTextPage.cs" />
     <Compile Include="Transforms\SkewExperimentPage.xaml.cs">
       <DependentUpon>SkewExperimentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transforms\TaperTransformPage.xaml.cs">
+      <DependentUpon>TaperTransformPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Transforms\TouchManipulationBitmap.cs" />
     <Compile Include="Transforms\TouchManipulationInfo.cs" />
@@ -298,6 +308,36 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Media\MountainClimbers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Media\SeatedMonkey.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Transforms\ShowAffineMatrixPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Transforms\ShowNonAffineMatrixPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Media\Banana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Transforms\TaperTransformPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Media\FacePalm.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

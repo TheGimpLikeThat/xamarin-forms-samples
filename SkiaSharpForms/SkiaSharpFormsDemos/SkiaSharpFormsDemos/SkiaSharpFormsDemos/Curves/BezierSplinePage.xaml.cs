@@ -11,6 +11,9 @@ namespace SkiaSharpFormsDemos.Curves
 {
     public partial class BezierSplinePage : ContentPage
     {
+
+        // Change to Interactive Page !!!!!
+
         TouchPoint[] touchPoints = new TouchPoint[4];
 
         SKPaint strokePaint = new SKPaint

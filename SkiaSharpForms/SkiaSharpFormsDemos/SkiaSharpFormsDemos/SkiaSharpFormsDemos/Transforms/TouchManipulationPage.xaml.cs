@@ -12,6 +12,13 @@ using TouchTracking;
 
 namespace SkiaSharpFormsDemos.Transforms
 {
+
+
+    // Use the TouchManipulationBitmp collection for a scatter display
+
+        // Convert this to testing out options
+
+
     public partial class TouchManipulationPage : ContentPage
     {
         List<TouchManipulationBitmap> bitmaps = 
@@ -24,17 +31,14 @@ namespace SkiaSharpFormsDemos.Transforms
         {
             InitializeComponent();
 
-            string resourceID = "SkiaSharpFormsDemos.Media.monkey.png";
+            string resourceID = "SkiaSharpFormsDemos.Media.MountainClimbers.jpg";
             Assembly assembly = GetType().GetTypeInfo().Assembly;
 
             using (Stream stream = assembly.GetManifestResourceStream(resourceID))
             using (SKManagedStream skStream = new SKManagedStream(stream))
             {
                 SKBitmap bitmap = SKBitmap.Decode(skStream);
-                bitmaps.Add(new TouchManipulationBitmap(bitmap)
-                {
-                    Matrix = SKMatrix.MakeScale(3, 3)
-                });
+                bitmaps.Add(new TouchManipulationBitmap(bitmap));
             }
         }
 
@@ -80,13 +84,35 @@ namespace SkiaSharpFormsDemos.Transforms
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
-            SKCanvas canvas = args.Surface.Canvas;
+            SKImageInfo info = args.Info;
+            SKSurface surface = args.Surface;
+            SKCanvas canvas = surface.Canvas;
+
             canvas.Clear();
+
+
+
 
             foreach (TouchManipulationBitmap bitmap in bitmaps)
             {
+                SKPaint matrixPaint = new SKPaint
+                {
+                    Color = SKColors.Black,
+                    TextSize = 48,
+                    StrokeWidth = 2
+                };
+
                 bitmap.Paint(canvas);
+
+            // Display the matrix in the lower-right corner
+            SKSize matrixSize = MatrixDisplay.Measure(bitmap.Matrix);
+
+            MatrixDisplay.Paint(canvas, bitmap.Matrix,
+                new SKPoint(info.Width - matrixSize.Width,
+                            info.Height - matrixSize.Height));
+
             }
+
         }
 
         SKPoint ConvertToPixel(Point pt)
